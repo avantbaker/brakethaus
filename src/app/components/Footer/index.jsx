@@ -7,7 +7,7 @@ import { Container, Section, Row } from '../../styles';
 import InputField from '../InputField';
 import Logo from '../Logo';
 import Button from '../Button';
-import footerBackground from '../../static/footer_bg';
+import footerBackground from '../../static/footer_bg.jpg';
 
 const StyledFooter = styled(Section)`
   background: url(${footerBackground}) center center no-repeat;
@@ -95,7 +95,7 @@ const StyledFooter = styled(Section)`
 `;
 
 const Footer = () => (
-  <StyledFooter>
+  <StyledFooter id="contact">
     <Container>
       <Row>
         <div className="footerColumnOne">

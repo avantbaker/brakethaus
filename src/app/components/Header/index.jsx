@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../lib/breakpoints';
+import MobileNavigationTrigger from '../MobileNavigationTrigger';
 import Logo from '../Logo';
 import Nav from '../Nav';
-import Container from '../../styles/Container';
-import MobileNavigationTrigger from '../MobileNavigationTrigger';
 
 const StyledHeader = styled.header`
   position: absolute;
@@ -37,6 +36,12 @@ const StyledHeader = styled.header`
     }
   }
 
+  .logo {
+    @media ${breakpoints.mobile} {
+      max-width: 185px;
+    }
+  }
+
   .trigger {
     display: none;
 
@@ -50,17 +55,15 @@ const Header = () => {
   const [mobileNavActive, openPocketNav] = useState(false);
   return (
     <StyledHeader>
-      <Container className="headerContainer">
-        <div className="headerInner">
-          <Logo />
-          <Nav pocketNav={mobileNavActive} />
-          <MobileNavigationTrigger 
-            className="trigger"
-            active={mobileNavActive}
-            onTriggerClick={() => openPocketNav(!mobileNavActive)} 
-          />
-        </div>
-      </Container>
+      <div className="headerInner">
+        <Logo className="logo" />
+        <MobileNavigationTrigger
+          className="trigger"
+          active={mobileNavActive}
+          onTriggerClick={() => openPocketNav(!mobileNavActive)}
+        />
+        <Nav pocketNav={mobileNavActive} setNav={(bool) => openPocketNav(bool)} />
+      </div>
     </StyledHeader>
   );
 }

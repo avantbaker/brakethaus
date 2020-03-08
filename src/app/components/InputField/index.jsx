@@ -26,6 +26,7 @@ const StyledInput = styled.div`
 
   & textarea {
     height: 100px;
+    resize: none;
   }
 `;
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="21px" viewBox="0 0 30 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>iconmonstr-gmail-1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0---Home" transform="translate(-1371.000000, -921.000000)" fill="#D22E2E">
+            <g id="Group-9" transform="translate(1371.000000, 803.000000)">
+                <g id="iconmonstr-gmail-1" transform="translate(0.000000, 118.000000)">
+                    <path d="M27.86,21 L2.14,21 C0.95875,21 -2.77555756e-16,20.0525294 -2.77555756e-16,18.8851765 L-2.77555756e-16,2.11482353 C-2.77555756e-16,0.947470588 0.95875,0 2.14,0 L27.86,0 C29.04125,0 30,0.947470588 30,2.11482353 L30,18.8851765 C30,20.0525294 29.04125,21 27.86,21 Z M15,13.482 L3.3225,5.47358824 L3.2975,19.7647059 L26.6525,19.7647059 L26.6525,5.47358824 L15,13.482 L15,13.482 Z M26.08625,1.23529412 L3.85,1.23529412 L15,8.92994118 C15,8.92994118 22.815,3.48723529 26.08625,1.23529412 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

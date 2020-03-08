@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import theme from '../../theme';
-import { Link } from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { breakpoints } from '../../lib/breakpoints';
 
 const slideIn = keyframes`
@@ -33,8 +33,8 @@ const StyledNav = styled.nav`
 
   @media ${breakpoints.navFlip} {
     display: none;
-    position: fixed;
     top: 0;
+    position: fixed;
     right: 0;
     width: 100%;
     height: 100%;
@@ -53,6 +53,7 @@ const StyledNav = styled.nav`
 
     @media ${breakpoints.navFlip} {
       width: 75vw;
+      position: relative;
       max-width: 300px;
       display: block;
       background: ${theme.black};
@@ -75,7 +76,7 @@ const StyledNav = styled.nav`
 
     @media ${breakpoints.navFlip} {
       color: #fff;
-      padding: 15px 0 12px 15px;
+      padding: 15px 0 15px 20px;
 
       & a {
         color: #fff;
@@ -84,15 +85,23 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Nav = ({ pocketNav }) => (
-  <StyledNav className="nav" pocketNav={pocketNav}>
-    <ul>
-      <li><Link to="/services">Services</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/work">Work</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-    </ul>
-  </StyledNav>
-);
+const Nav = ({ pocketNav, setNav }) => {
+  const close = () => {
+
+    setTimeout(() => {
+      return setNav(false);
+    }, 1000);
+  }
+  return (
+    <StyledNav className="nav" pocketNav={pocketNav}>
+      <ul>
+        <li><AnchorLink href="#services" onClick={() => close()}>Services</AnchorLink></li>
+        <li><AnchorLink href="#about" onClick={() => close()}>About</AnchorLink></li>
+        <li><AnchorLink href="#work" onClick={() => close()}>Work</AnchorLink></li>
+        <li><AnchorLink href="#contact" onClick={() => close()}>Contact</AnchorLink></li>
+      </ul>
+    </StyledNav>
+  );
+}
 
 export default Nav;

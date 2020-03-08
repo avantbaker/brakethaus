@@ -11,11 +11,12 @@ const StyledTrigger = styled.div`
   background: transparent;
   z-index: 1000;
   transition: all .35s ease-out;
+  position: absolute;
+  right: 15px;
 
   @media screen and (min-width: 701px) {
     display: none;
   }
-
 
   span {
     position: absolute;
@@ -45,6 +46,8 @@ const StyledTrigger = styled.div`
   }
 
   ${props => props.active && css`
+    position: fixed;
+
     & .wrapper {
       transform: rotate(180deg);
     }
