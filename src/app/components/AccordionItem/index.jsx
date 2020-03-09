@@ -28,11 +28,8 @@ const StyledAccordionItem = styled.div`
   }
 
   img {
-    /* width: 15px; */
     margin-left: 15px;
     position: relative;
-    /* top: 55px;  */
-    /* right: 0; */
     transition: all .35s;
   }
 
@@ -81,7 +78,6 @@ const StyledAccordionItem = styled.div`
 `;
 
 const AccordionItem = ({ title, children, open, openAccordion }) => {
-  // const [open, setOpen] = useState(openInitial);
 
   return (
     <StyledAccordionItem open={open} onClick={() => openAccordion()}>

@@ -111,11 +111,7 @@ const StyledWorkCallout = styled.div`
   }
 
   ${props => props.fullScreen && css`
-    height: 100vh;
-    width: 100vw;
     max-width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
     margin: 0;
 
     .logo {
@@ -149,9 +145,7 @@ const StyledWorkCallout = styled.div`
     }
 
     @media ${breakpoints.tablet} {
-      height: auto;
-      min-height: 100vh;
-      min-width: 100vw;
+      margin: 0;
 
       .columnCallout {
         max-width: 100%;
@@ -160,6 +154,12 @@ const StyledWorkCallout = styled.div`
 
       .logo {
         height: 450px;
+      }
+
+      .close {
+        span {
+          background: #fff;
+        }
       }
     }
   `}

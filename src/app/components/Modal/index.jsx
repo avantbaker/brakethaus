@@ -17,7 +17,6 @@ const show = keyframes`
   }
 `;
 
-
 const StyledModal = styled.div`
   display: ${props => props.open ? 'block' : 'none'};
   position: fixed;
@@ -30,6 +29,7 @@ const StyledModal = styled.div`
   background: ${theme.gray};
   z-index: 1000;
   animation: ${show} 0.25s ease-out;
+  overflow-y: scroll;
 `;
 
 const Modal = ({ open, children, closeModal }) => {

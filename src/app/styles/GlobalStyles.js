@@ -29,8 +29,8 @@ const GlobalStyles = createGlobalStyle`
     color: ${theme.black};
 
     &.noScroll {
-      /* position: fixed; */
-      /* width: 100%; */
+      position: fixed;
+      width: 100%;
     }
   }
 

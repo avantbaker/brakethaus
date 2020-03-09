@@ -70,7 +70,6 @@ const StyledTrigger = styled.div`
   `}
 `;
 
-
 const MobileNavigationTrigger = ({ onTriggerClick, active }) => {
   return (
     <StyledTrigger onClick={() => onTriggerClick()} active={active}>

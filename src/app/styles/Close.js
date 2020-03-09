@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../lib/breakpoints';
 import theme from '../theme';
 
 const Close = styled.div `
@@ -29,6 +30,12 @@ const Close = styled.div `
 
     &:nth-of-type(2) {
       transform: translateY(0) rotate(45deg);
+    }
+  }
+
+  @media ${breakpoints.tablet} {
+    & span {
+      background: #fff;
     }
   }
 `;
