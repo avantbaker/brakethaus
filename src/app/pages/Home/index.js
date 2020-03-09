@@ -28,7 +28,7 @@ const StyledHome = styled.div`
       margin-bottom: 50px;
 
       &:nth-of-type(2) {
-        margin-bottom: 1475px;
+        margin-bottom: 950px;
       }
     }
 

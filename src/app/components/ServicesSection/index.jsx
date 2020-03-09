@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Section, Container, Row } from '../../styles';
 import technologiesLogos from '../../static/techologies_logos.png';
 import AccordionItem from '../AccordionItem';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { breakpoints } from '../../lib/breakpoints';
 
 const StyledServicesSection = styled(Section)`
@@ -41,6 +42,16 @@ const StyledServicesSection = styled(Section)`
       }
     }
   }
+
+  .cta {
+    padding-top: 60px;
+    font-family: 'Horatio';
+    font-size: 1.375rem;
+    color: #333A42;
+    font-weight: 600;
+    letter-spacing: 0.79px;
+    line-height: 1.875rem;
+  }
 `;
 
 const ServicesSection = () => {
@@ -77,6 +88,8 @@ const ServicesSection = () => {
                 </div>
               </ul>
             </AccordionItem>
+
+            <h4 className="cta">- and more. Don't see what you need?<br /> <AnchorLink href="#contact" className="underline">Get in touch</AnchorLink>, we can help.</h4>
           </div>
           <div className="column">
             <img className="calloutImage" src={technologiesLogos} alt="Technologies" />
